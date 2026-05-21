@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'travello',
+    'travello.apps.TravelloConfig',
     'calc',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'test1.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'test1',
+        'USER': 'postgres', 
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1',
+        'PORT': '5432'
     }
 }
 
